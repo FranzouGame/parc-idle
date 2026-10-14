@@ -57,7 +57,8 @@ export function parkPanel(game: GameAPI): Panel {
         sec.append(b);
         refs.push(() => {
           setText(b, `🔓 Débloquer — 🪙 ${fmt(z.unlockCost)}`);
-          b.disabled = game.state.coins < z.unlockCost;
+          const prev = ZONES.find((x) => x.order === z.order - 1);
+          b.disabled = game.state.coins < z.unlockCost || (!!prev && !game.state.zones[prev.id]);
         });
         el.append(sec);
         continue;

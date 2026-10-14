@@ -11,7 +11,7 @@ export function setNotation(n: Settings['notation']): void {
 export function fmt(n: number): string {
   if (!isFinite(n)) return '∞';
   const a = Math.abs(n);
-  if (a < 1000) return a < 10 ? n.toFixed(2) : a < 100 ? n.toFixed(1) : n.toFixed(0);
+  if (a < 1000) return Number.isInteger(n) ? String(n) : a < 10 ? n.toFixed(2) : a < 100 ? n.toFixed(1) : n.toFixed(0);
   if (notation === 'sci') return n.toExponential(2).replace('e+', 'e');
   const e = Math.floor(Math.log10(a) / 3);
   if (e >= SUF.length) return n.toExponential(2).replace('e+', 'e');

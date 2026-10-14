@@ -23,7 +23,7 @@ de possession, prochain succès proche, ou prestige disponible.
 | Pièces 🪙 | Monnaie principale. Gagnées en continu (aussi hors ligne). Servent à tout acheter. |
 | Visiteurs 👥 | Indicateur dérivé (non dépensable). Dépend de l'attrait des bâtiments. Détermine la demande de chaque besoin. |
 | Satisfaction 😊 | 0..1, dérivée de la couverture des besoins. Multiplie le revenu (de 0.5× à 1×). |
-| Étoiles ⭐ | Monnaie de prestige. +5 % de revenu par étoile gagnée à vie, et dépensables en bonus permanents. |
+| Étoiles ⭐ | Monnaie de prestige. +2 % de revenu par étoile gagnée à vie, et dépensables en bonus permanents. |
 
 ## Zones (5)
 
@@ -83,8 +83,8 @@ Un écran « Bon retour ! » résume. Pas d'événements simulés.
 
 ## Prestige — « Réouverture du parc »
 
-- Étoiles à vie = floor((totalEarned / 1e7)^0.5). Gain = étoiles à vie − déjà gagnées.
-- Premier prestige visé : ~2 h de jeu actif (1 étoile à 1e7 pièces gagnées (~50 min), ~10 étoiles vers 2 h
+- Étoiles à vie = floor((totalEarned / 1e10)^0.5). Gain = étoiles à vie − déjà gagnées.
+- Premier prestige visé : ~2 h de jeu actif (~10 étoiles vers 2,5–3 h
   de jeu actif).
 - Réinitialise : pièces, bâtiments, zones, améliorations. Conserve : étoiles, bonus de prestige, succès, stats, réglages.
 - Boutique de prestige (~8 bonus à niveaux) : revenu global, coûts réduits, hors-ligne plus long, pièces

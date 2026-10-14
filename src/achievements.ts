@@ -52,7 +52,7 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   A('time_24h', '🕰️', 'Le parc ne dort jamais', 'Jouer 24 heures.', 'playSeconds', 86400),
   // Clics
   A('tap_100', '👆', 'Doigt agile', 'Cliquer 100 fois.', 'taps', 100),
-  A('tap_2k', '🖱️', 'Tendinite', 'Cliquer 2 000 fois.', 'taps', 2000),
+  A('tap_2k', '🖱️', 'Tendinite', 'Cliquer 500 fois.', 'taps', 500),
   // Coups de pub
   A('promo_1', '📣', 'Première affiche', 'Lancer 1 coup de pub.', 'promos', 1),
   A('promo_25', '📢', 'Roi du marketing', 'Lancer 25 coups de pub.', 'promos', 25),

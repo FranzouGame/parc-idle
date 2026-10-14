@@ -210,17 +210,9 @@ export function mountUI(root: HTMLElement, game: GameAPI): void {
   game.on('change', scheduleRebuild);
   game.on('toast', (t) => toast(t.text, t.kind));
   game.on('eventStart', (e) => {
-    const def = getEventDef(e.defId);
-    if (def) toast(`${def.emoji} ${def.name} !`, def.positive ? 'good' : 'bad');
     rebuildEvents();
   });
   game.on('eventEnd', rebuildEvents);
-  game.on('achievement', (a) => toast(`🏆 Succès : ${a.name}`, 'good'));
-  game.on('zoneUnlocked', (z) => {
-    const zd = ZONES.find((x) => x.id === z);
-    if (zd) toast(`${zd.emoji} Zone débloquée : ${zd.name}`, 'good');
-  });
-  game.on('prestige', (p) => toast(`⭐ Parc rouvert ! +${fmt(p.gained)} étoiles`, 'good'));
   game.on('burst', (b) => {
     const el = h('div', 'burst', `+${fmt(b.coins)} 🪙 ${b.label}`);
     el.style.left = 30 + Math.random() * 40 + '%';
