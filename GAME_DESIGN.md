@@ -83,9 +83,9 @@ Un écran « Bon retour ! » résume. Pas d'événements simulés.
 
 ## Prestige — « Réouverture du parc »
 
-- Étoiles à vie = floor((totalEarned / 1e6)^0.5). Gain = étoiles à vie − déjà gagnées.
-- Premier prestige visé : ~2 h de jeu actif (≥ 1 étoile à 1e6 pièces gagnées, mais intéressant
-  vers 4e7 pièces → 6 étoiles).
+- Étoiles à vie = floor((totalEarned / 1e7)^0.5). Gain = étoiles à vie − déjà gagnées.
+- Premier prestige visé : ~2 h de jeu actif (1 étoile à 1e7 pièces gagnées (~50 min), ~10 étoiles vers 2 h
+  de jeu actif).
 - Réinitialise : pièces, bâtiments, zones, améliorations. Conserve : étoiles, bonus de prestige, succès, stats, réglages.
 - Boutique de prestige (~8 bonus à niveaux) : revenu global, coûts réduits, hors-ligne plus long, pièces
   de départ, coup de pub, chance d'événements, visiteurs.
